@@ -14,7 +14,7 @@ Create a bare repository named `/opt/games.git` (ensure exact name usage).
 
 `hostnamectl`
 
-```bash
+```console
  Static hostname: ststor01.stratos.xfusioncorp.com
        Icon name: computer-container
          Chassis: container ☐
