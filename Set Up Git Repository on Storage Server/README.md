@@ -14,7 +14,7 @@ Create a bare repository named `/opt/games.git` (ensure exact name usage).
 
 `hostnamectl`
 
-<pre>
+```bash
  Static hostname: ststor01.stratos.xfusioncorp.com
        Icon name: computer-container
          Chassis: container ☐
@@ -26,7 +26,7 @@ Operating System: CentOS Stream 9
           Kernel: Linux 5.4.0-1106-gcp
     Architecture: x86-64
 Firmware Version: Google
-</pre>
+```
 
 ## 2. Setup user Git config
 
