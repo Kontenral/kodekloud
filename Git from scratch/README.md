@@ -7,13 +7,11 @@ Utilize yum to install the git package on the `Storage Server`.
 Create a bare repository named `/opt/games.git` (ensure exact name usage).
 
 ## 1. Install Git on Storage Server
-
 `ssh natasha@ststor01`
 
 `sudo -s`
 
 `hostnamectl`
-
 ```console
  Static hostname: ststor01.stratos.xfusioncorp.com
        Icon name: computer-container
@@ -29,7 +27,6 @@ Firmware Version: Google
 ```
 
 `yum install -y git`
-
 ```console
 Installed:
   emacs-filesystem-1:27.2-18.el9.noarch                                        
@@ -111,10 +108,9 @@ Complete!
 `git config --global --add user.email natasha@stratos.xfusioncorp.com`
 
 ## 3. Create a bare repository
-
 `mkdir -p /opt/games.git && cd $_`
-`git init --bare /opt/games.git`
 
+`git init --bare /opt/games.git`
 ```console
 hint: Using 'master' as the name for the initial branch. This default branch name
 hint: is subject to change. To configure the initial branch name to use in all
@@ -130,7 +126,6 @@ Initialized empty Git repository in /opt/games.git/
 ```
 
 `ls -la`
-
 ```console
 total 40
 drwxr-xr-x 7 root root 4096 Sep 25 20:12 .
@@ -144,5 +139,32 @@ drwxr-xr-x 2 root root 4096 Sep 25 20:12 info
 drwxr-xr-x 4 root root 4096 Sep 25 20:12 objects
 drwxr-xr-x 4 root root 4096 Sep 25 20:12 refs
 ```
+
+## 4. Clone repository
+`cd /usr/src/kodekloudrepos`
+
+`ls -la`
+```console
+total 8
+drwxr-xr-x 2 natasha natasha 4096 Oct 17 20:05 .
+drwxr-xr-x 1 root    root    4096 Oct 17 20:05 ..
+```
+
+`git clone /opt/ecommerce.git`
+```console
+Cloning into 'ecommerce'...
+warning: You appear to have cloned an empty repository.
+done.
+```
+
+`ls -la`
+```console
+total 12
+drwxr-xr-x 3 natasha natasha 4096 Oct 17 20:12 .
+drwxr-xr-x 1 root    root    4096 Oct 17 20:05 ..
+drwxr-xr-x 3 natasha natasha 4096 Oct 17 20:12 ecommerce
+```
+
+
 
 
