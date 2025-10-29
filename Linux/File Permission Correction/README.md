@@ -16,7 +16,7 @@ After conducting a security audit within the `Stratos DC`, the Nautilus security
 `sudo chmod 644 /etc/hostname`
 
 ## 3. Revoke all perm from `mariyam`
-`setfacl u:mariyam:--- /etc/hostname`
+`setfacl -m u:mariyam:--- /etc/hostname`
 
 ## 4. Set `read only` to `rod`
 `setfacl -m u:rod:r-- /etc/hostname`
